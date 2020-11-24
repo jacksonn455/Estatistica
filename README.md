@@ -36,3 +36,58 @@ Desenho do gráfico a partir da tabela: histograma, polígono de frequências e 
 --------------------
 
 ![](https://github.com/jacksonn455/Estatistica/blob/master/tela%204.png)
+
+## Executando a aplicação
+
+Certifique-se que tenha instalado o NodeJS (versão >= 12.18.3) em sua máquina.
+
+Abra seu terminal e instale o Gulp de forma global com o comando abaixo:
+
+> npm install gulp --global
+
+Clone o repositório, acesse a raiz do projeto e instale as dependências.
+
+> npm install
+
+Para executar a aplicação, execute o comando abaixo:
+
+> gulp
+
+É isso aí!
+
+--------------------
+
+## Arquivos e Diretórios
+
+```bash
+├── assets
+│   ├── dev
+│   │   ├── js
+│   │   │   ├── calc
+│   │   │   │   ├──
+│   │   │   │   ├──
+│   │   │   │   └──
+│   │   │   └── default.js
+│   │   └── less
+│   │       ├──
+│   │       ├──
+│   │       └──
+│   ├── images
+│   └── pub
+│       ├── css
+│       │   ├──
+│       │   └──
+│       └── js
+│           ├──
+│           └──
+├── .gitignore
+├── gulpfile.js
+├── gulpfile.json
+├── index.hml
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+├── server.js
+└── webpack.config.js
+```
