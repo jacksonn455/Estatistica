@@ -27,19 +27,19 @@ Desenho do gráfico a partir da tabela: histograma, polígono de frequências e 
 
 --------------------
 
-![](https://github.com/jacksonn455/Estatistica/blob/master/tela%201.png)
+![](https://github.com/jacksonn455/Estatistica/blob/main/tela%201.png)
 
 --------------------
 
-![](https://github.com/jacksonn455/Estatistica/blob/master/tela%202.png)
+![](https://github.com/jacksonn455/Estatistica/blob/main/tela%202.png)
 
 --------------------
 
-![](https://github.com/jacksonn455/Estatistica/blob/master/tela%203.png)
+![](https://github.com/jacksonn455/Estatistica/blob/main/tela%203.png)
 
 --------------------
 
-![](https://github.com/jacksonn455/Estatistica/blob/master/tela%204.png)
+![](https://github.com/jacksonn455/Estatistica/blob/main/tela%204.png)
 
 ## Executando a aplicação
 
