@@ -12,6 +12,10 @@ Tabelas e Gráficos
   | :---: |
 --------------------
 
+- Acesso em: https://jacksonn455.github.io/Estatistica/
+
+--------------------
+
 - Programa estatístico básico. Desenvolvido para a matéria de Estatística Aplicada à Computação.
 - Desenvolvido com javascript, html, css
 - O trabalho contém: médias aritméticas e geométricas, moda, mediana, desvio padrão amostral e populacional,
