@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Estatística</title>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="imgs/grafico.png">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" type="text/css" href="css/materialize/materialize.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+<script src="https://kit.fontawesome.com/7d17b38ca7.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="navbar-fixed">
+	    <nav class="grey_color">
+	      	<div id="menu-navegacao" class="nav-wrapper container">
+  			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+	      		<span class="font_logo brand-logo center">Estatística</span>
+	        	<ul class="left hide-on-med-and-down">
+	        		<li><a href="#calcular">Calcular</a></li>
+	          		<li><a href="#distri_freque">Tabela Distribuição de Frequência</a></li>
+	          	</ul>
+	        	<ul class="right hide-on-med-and-down">
+	          		<li><a href="#anali_dados">Resultados da Análise de Dados</a></li>
+	          		<li><a href="#graficos">Gráficos</a></li>
+	        	</ul>
+	      	</div>
+	    </nav>
+	</div>
+	<!-- Menu Mobile -->
+	<ul class="side-nav" id="mobile-demo">
+		<li><a href="#calcular">Calcular</a></li>
+  		<li><a href="#distri_freque">Tabela Distribuição de Frequência</a></li>
+  		<li><a href="#anali_dados">Resultados da Análise de Dados</a></li>
+  		<li><a href="#graficos">Gráficos</a></li>
+	</ul>
+
+	<div class="container">
+		<div id="calcular" class="row z-depth-2 section-grid">
+			<div class="col s12">
+				<div class="card">
+					<div class="card-image">
+						<div class="area_image"></div>
+					</div>
+				</div>
+				<div class="row">
+			        <div class="input-field col s12">
+			          <textarea id="text-calc" class="materialize-textarea"></textarea>
+			          <label for="text-calc"><font color="#0d47a1">Digite seus dados aqui. Ex: 15 45 82 29 55 62 72 5 8 12</font></label>
+			          <div class="center-align">
+			          	<button id="btn_calc" class="blue darken-4 btn btn-large waves-effect waves-light"><i class="fas fa-calculator"></i></button>
+			          </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
+		<div id="distri_freque" class="row z-depth-2 section-grid">
+			<div class="col s12">
+				<h4 class="center-align blue-text text-darken-4">Tabela Distribuição de Frequência</h4>
+				<table class="tableStat responsive-table highlight centered">
+					<thead>
+						<tr>
+							<th class="tooltipped" data-position="top" data-tooltip="Intervalo de Classe"><font color="#0d47a1"><b>X</b></font></th>
+							<th class="tooltipped" data-position="top" data-tooltip="Frequência Absoluta do Intervalo"><font color="#0d47a1"><b>F</b><small><b>i</b></small></font></th>
+							<th class="tooltipped" data-position="top" data-tooltip="Ponto Médio do Intervalo"><font color="#0d47a1"><b>X</b></font><small><font color="#0d47a1"><b>i</b></font></small></th>
+							<th class="tooltipped" data-position="top" data-tooltip="Frequência Acumulada"><font color="#0d47a1"><b>Fac</b></th>
+							<th class="tooltipped" data-position="top" data-tooltip="Frequência Relativa"><font color="#0d47a1"><b>F</b></font><small><font color="#0d47a1"><b>i (%)</b></font></small></th>
+							<th class="tooltipped" data-position="top" data-tooltip="Frequência Acumulada Relativa"><font color="#0d47a1"><b>FacR</b><small><b> (%) </b></font></small></th>
+						</tr>
+					</thead>
+					<tbody id="frequency_table"></tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="anali_dados" class="row z-depth-2 section-grid">
+			<div class="col s12">
+				<h4 class="blue-text text-darken-4 center-align">Resultados da Análise de Dados</h4>
+				<div class="col s12">
+	            	<h5>Conjunto Ordenado: <span id="conjunto" class="line-height anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	          	</div>
+	          	<div class="col s12 m6 l6">
+	            	<h5>Média Aritmética: <span id="media_aritmetica" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Média Geométrica (G): <span id="media_geometrica" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Moda (mo): <span id="moda" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Mediana: <span id="mediana" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Desvio Padrão Amostral (s): <span id="desvio_amostral" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	          	</div>
+	          	<div class="col s12 m6 l6">
+	            	<h5>Variãncia Amostral (s²): <span id="variancia_amostral" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Desvio Padrão Populacional (σ): <span id="desvio_populacional" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>Variãncia Populacional (σ²): <span id="variancia_populacional" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>CV Amostral: <span id="coeficiente_variacao_amostral" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	            	<h5>CV Populacional: <span id="coeficiente_variacao_populacional" class="anali-dados-font blue-text text-darken-4" ><b>0</b></span></h5>
+	          	</div>
+			</div>
+		</div>
+
+		<div id="graficos" class="row z-depth-2 section-grid">
+			<div class="col s12">
+				<h4 class="blue-text text-darken-4 center-align">Gráficos</h4>
+				<div class="col s12 m6">
+					<h5 class="blue-text text-darken-4 center-align">Histograma</h5>
+					<canvas id="histograma"></canvas>
+				</div>
+				<div class="col s12 m6">
+					<h5 class="blue-text text-darken-4 center-align">Polígono de Frequências</h5>
+					<canvas id="poligono_frequencia"></canvas>
+				</div>		
+			</div>
+			<div class="col m6">
+					<h5 class="blue-text text-darken-4 center-align">Ogiva</h5>
+					<canvas id="ogiva"></canvas>
+				</div>
+		</div>
+	</div>
+
+    <footer class="page-footer grey_color">
+      	<div class="footer-copyright">
+        	<div class="container cop_footer center #39486d-text text-lighten-4">
+          		<p class="#39486d-text text-lighten-4">© <span id="data-ano"></span> Jackson F. Magnabosco</p>
+        	</div>
+      	</div>
+    </footer>
+
+    <script type="text/javascript" src="js/calc/bundle.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize/materialize.min.js"></script>
+	<script type="text/javascript" src="js/default.js"></script>
+
+	<!--
+      Instalação dos Módulos
+        - npm install && npm install -g webpack
+        - webpack -p // Sempre que alterar o arquivo 'calculos-estatisticos.js', rodar esse comando na raiz do projeto.
+    -->
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+.section-grid{
+	padding: 0px 10px 20px 10px;
+}
+
+h5 {
+  color: #0d47a1;
+}
+
+h4 {
+  color: #0d47a1;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+h4:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #0d47a1;
+  margin: 6px auto; 
+}
+
+.navbar-fixed nav.grey_color, footer.grey_color{
+  background-color: #0d47a1;
+}
+
+.navbar-fixed nav .nav-wrapper .font_logo{
+  font-weight: 700 !important;
+  transition-property: color, font-weight;
+  transition-duration: 0.5s;
+}
+.navbar-fixed nav .nav-wrapper .font_logo:hover{
+  color: #0d47a1;
+}
+
+.area_image{
+  height: 176px;
+  width: 100%;
+  display: flex;
+  background: url('../imgs/stati.jpg') center/cover;
+}
+
+.container .row table.tableStat thead tr th,
+div.container table tbody tr:last-child{
+  border-top: 1px solid #0d47a1!important;
+  border-bottom: 1px solid #0d47a1!important;
+  color: #0d47a1;
+}
+
+footer .cop_footer p{
+	font-size: 18px;
+  display: inline-block;
+	transition-property: color, font-weight;
+	transition-duration: 0.5s;
+}
+footer .cop_footer p:hover{
+	color: #0d47a1 !important;
+}
+
+
+@media only screen and (max-width : 1120px){
+    .hide-on-med-and-down {
+      display: none !important;
+    }
+    nav a.button-collapse {
+      display: block;
+    } 
+}
